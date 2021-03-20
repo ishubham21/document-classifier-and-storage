@@ -21,60 +21,76 @@
 
 <body>
 
-    <div class="selectFile-container">
-        <div id="content" style="margin-top:2em">
-    
-            <form id="upload-file" method="post" enctype="multipart/form-data">
-
-                <label for="doc" class="upload-label">
-                    Select Document Type
-                </label>
-
-                <div class="input-inner">
-                    <select name="document" id="doc">
-                        <option value="none">None</option>
-                        <option value="Aadhar Card">Aadhar Card</option>
-                        <option value="PAN Card">Pan Card</option>
-                        <option value="Voter ID">Voter ID Card</option>
-                        <option value="Birth Certificate">Birth Certificate</option>
-                        <option value="Death Certificate">Death Certificates</option>
-                        <option value="Degree">Degree</option>
-                        <option value="Driving License">Driving License</option>
-                    </select>
-                </div>
-
-                <label for="imageUpload" class="upload-label" style="margin-top: 30px;">
-                    Select Your Image
-                </label>
-    
-                <div class="image-section" style="display:none;">
-                    <div>
-                        <button type="button" id="btn-predict">Submit Document</button>
-                    </div>
-                    <img id="imagePreview" width="800px" height="600px" />
-                </div>
-    
-                <div class="input-inner">
-                    <input type="file" name="image" id="imageUpload" accept="image/*" title=" ">
-                </div>
-            </form>
-    
-        </div>
-    </div>
-
-    <div id="details-pop">
-        <div class="cross">
-            <span></span>
-            <span></span>
-        </div>
-
-        <p>Wait for the results to continue</p>
+    <div class="add-container">
+        <div class="selectFile-container">
+            <div id="content" style="margin-top:2em">
         
-        <div class="result-loader"></div>
-
-        <p class="result-text"></p>
+                <form id="upload-file" method="post" enctype="multipart/form-data">
+        
+                    <label for="doc" class="upload-label">
+                        Select Document Type
+                    </label>
+        
+                    <div class="input-inner">
+                        <select name="document" id="doc">
+                            <option value="none">None</option>
+                            <option value="Aadhar Card">Aadhar Card</option>
+                            <option value="PAN Card">Pan Card</option>
+                            <option value="Voter ID">Voter ID Card</option>
+                            <option value="Birth Certificate">Birth Certificate</option>
+                            <option value="Death Certificate">Death Certificates</option>
+                            <option value="Degree">Degree</option>
+                            <option value="Driving License">Driving License</option>
+                            <option value="Ration Card">Ration Card</option>
+                            <option value="Service Identity Card">Service Identity Card</option>
+                            <option value="Original Resident">Original Resident</option>
+                            <option value="Marksheet">Marksheet</option>
+                            <option value="Marriage Certificate">Marriage Certificate</option>
+                        </select>
+                    </div>
+        
+                    <label for="imageUpload" class="upload-label" style="margin-top: 30px;">
+                        Select Your Image
+                    </label>
+        
+                    <div class="image-section" style="display:none;">
+                        <div>
+                            <button type="button" id="btn-predict">Submit Document</button>
+                        </div>
+                        <img id="imagePreview" width="800px" height="600px" />
+                    </div>
+        
+                    <div class="input-inner">
+                        <input type="file" name="image" id="imageUpload" accept="image/*" title=" ">
+                    </div>
+                </form>
+        
+            </div>
+        </div>
+        
+        <div id="details-pop">
+            <div class="cross">
+                <span></span>
+                <span></span>
+            </div>
+        
+            <p>Wait for the results to continue</p>
+        
+            <div class="result-loader"></div>
+        
+            <p class="result-text"></p>
+        </div>
     </div> 
 
+    <div class="display-container">
+        <p class="disp-docs">Your Documents</p>
+
+        <div class="doc-imgs">
+            <p></p>
+        </div>
+
+        <button id="add-more">Add More?</button>
+    </div>
     <script src="./js/app.js" type="text/javascript"></script>
 </body>
 
