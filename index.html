@@ -10,6 +10,24 @@
 
     <link href="./css/style.css" rel="stylesheet">
 
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCA51jEYiisc53oFP35HrLT3-KLM71iSjU",
+            authDomain: "document-storage-800b0.firebaseapp.com",
+            projectId: "document-storage-800b0",
+            storageBucket: "document-storage-800b0.appspot.com",
+            messagingSenderId: "889141534256",
+            appId: "1:889141534256:web:5bd28942faaed23024d7f5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
     <script src="./js/jquery.min.js"></script>
 
     <script src="./ml-js/p5.js"></script>
@@ -24,13 +42,13 @@
     <div class="add-container">
         <div class="selectFile-container">
             <div id="content" style="margin-top:2em">
-        
+
                 <form id="upload-file" method="post" enctype="multipart/form-data">
-        
+
                     <label for="doc" class="upload-label">
                         Select Document Type
                     </label>
-        
+
                     <div class="input-inner">
                         <select name="document" id="doc">
                             <option value="none">None</option>
@@ -48,49 +66,52 @@
                             <option value="Marriage Certificate">Marriage Certificate</option>
                         </select>
                     </div>
-        
+
                     <label for="imageUpload" class="upload-label" style="margin-top: 30px;">
                         Select Your Image
                     </label>
-        
+
                     <div class="image-section" style="display:none;">
                         <div>
                             <button type="button" id="btn-predict">Submit Document</button>
                         </div>
                         <img id="imagePreview" width="800px" height="600px" />
                     </div>
-        
+
                     <div class="input-inner">
                         <input type="file" name="image" id="imageUpload" accept="image/*" title=" ">
                     </div>
                 </form>
-        
+
             </div>
         </div>
-        
+
         <div id="details-pop">
             <div class="cross">
                 <span></span>
                 <span></span>
             </div>
-        
+
             <p>Wait for the results to continue</p>
-        
+
             <div class="result-loader"></div>
-        
+
             <p class="result-text"></p>
+
+            <p class="res-ok" style="margin-top: 15px;"></p>
         </div>
-    </div> 
+    </div>
 
     <div class="display-container">
         <p class="disp-docs">Your Documents</p>
 
         <div class="doc-imgs">
-            <p></p>
+            <img src="" alt="" id="doc-img" height="200" width="300">
         </div>
 
         <button id="add-more">Add More?</button>
     </div>
+
     <script src="./js/app.js" type="text/javascript"></script>
 </body>
 
